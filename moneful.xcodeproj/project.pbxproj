@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0012D1D22766E0D9B392DB54 /* Pods_monefulUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A6CFE468B79F3CCB77A95A /* Pods_monefulUITests.framework */; };
+		50FEA171BF6882E2C84378F2 /* Pods_monefulTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D64DCCF652C88049DEF5E2 /* Pods_monefulTests.framework */; };
+		5D0724FA232064BA0090AAAA /* writeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0724F9232064BA0090AAAA /* writeViewController.swift */; };
+		5D13A5F72314A46500D94746 /* icons8-ホームページ-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */; };
+		5D13A5F92314A46F00D94746 /* icons8-設定-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D13A5F82314A46F00D94746 /* icons8-設定-24.png */; };
+		5D27E51F235AFD320066F957 /* todoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27E51E235AFD320066F957 /* todoRealm.swift */; };
+		5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828123125F8C008BF9B6 /* AppDelegate.swift */; };
+		5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828323125F8C008BF9B6 /* ViewController.swift */; };
+		5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828523125F8C008BF9B6 /* Main.storyboard */; };
+		5DFF828923125F8D008BF9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828823125F8D008BF9B6 /* Assets.xcassets */; };
+		5DFF828C23125F8D008BF9B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828A23125F8D008BF9B6 /* LaunchScreen.storyboard */; };
+		5DFF829723125F8D008BF9B6 /* monefulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF829623125F8D008BF9B6 /* monefulTests.swift */; };
+		5DFF82A223125F8D008BF9B6 /* monefulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF82A123125F8D008BF9B6 /* monefulUITests.swift */; };
+		C3BC501EE61C200F7FFEFE1B /* Pods_moneful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC06340D9A9DC473BEB6854 /* Pods_moneful.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DFF829323125F8D008BF9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFF827623125F8C008BF9B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DFF827D23125F8C008BF9B6;
+			remoteInfo = moneful;
+		};
+		5DFF829E23125F8D008BF9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFF827623125F8C008BF9B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DFF827D23125F8C008BF9B6;
+			remoteInfo = moneful;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B9D98341BAB6010B1D3BFFD /* Pods-monefulUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monefulUITests.release.xcconfig"; path = "Target Support Files/Pods-monefulUITests/Pods-monefulUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1E703F341FF700300A543027 /* Pods-moneful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneful.debug.xcconfig"; path = "Target Support Files/Pods-moneful/Pods-moneful.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0724F9232064BA0090AAAA /* writeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeViewController.swift; sourceTree = "<group>"; };
+		5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ホームページ-24.png"; sourceTree = "<group>"; };
+		5D13A5F82314A46F00D94746 /* icons8-設定-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-設定-24.png"; sourceTree = "<group>"; };
+		5D27E51E235AFD320066F957 /* todoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = todoRealm.swift; path = "/Users/yoshimurayuusaku/Desktop/iOS Develop/moneful/moneful/todoRealm.swift"; sourceTree = "<absolute>"; };
+		5DFF827E23125F8C008BF9B6 /* moneful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneful.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFF828123125F8C008BF9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DFF828323125F8C008BF9B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DFF828623125F8C008BF9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DFF828823125F8D008BF9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DFF828B23125F8D008BF9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DFF828D23125F8D008BF9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DFF829223125F8D008BF9B6 /* monefulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monefulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFF829623125F8D008BF9B6 /* monefulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monefulTests.swift; sourceTree = "<group>"; };
+		5DFF829823125F8D008BF9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DFF829D23125F8D008BF9B6 /* monefulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monefulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFF82A123125F8D008BF9B6 /* monefulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monefulUITests.swift; sourceTree = "<group>"; };
+		5DFF82A323125F8D008BF9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FBE1EEC7FA8016B0FAAB862 /* Pods-monefulUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monefulUITests.debug.xcconfig"; path = "Target Support Files/Pods-monefulUITests/Pods-monefulUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		66A6CFE468B79F3CCB77A95A /* Pods_monefulUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_monefulUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D61755612CA5B86C4BFB84 /* Pods-monefulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monefulTests.release.xcconfig"; path = "Target Support Files/Pods-monefulTests/Pods-monefulTests.release.xcconfig"; sourceTree = "<group>"; };
+		771AFD50A38908849CD72AC8 /* Pods-monefulTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-monefulTests.debug.xcconfig"; path = "Target Support Files/Pods-monefulTests/Pods-monefulTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AC06340D9A9DC473BEB6854 /* Pods_moneful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moneful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC6DECF818E4FDDF0A1C010E /* Pods-moneful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneful.release.xcconfig"; path = "Target Support Files/Pods-moneful/Pods-moneful.release.xcconfig"; sourceTree = "<group>"; };
+		E9D64DCCF652C88049DEF5E2 /* Pods_monefulTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_monefulTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DFF827B23125F8C008BF9B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BC501EE61C200F7FFEFE1B /* Pods_moneful.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF828F23125F8D008BF9B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FEA171BF6882E2C84378F2 /* Pods_monefulTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF829A23125F8D008BF9B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0012D1D22766E0D9B392DB54 /* Pods_monefulUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D13A5F52314A3B300D94746 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */,
+				5D13A5F82314A46F00D94746 /* icons8-設定-24.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		5DFF827523125F8C008BF9B6 = {
+			isa = PBXGroup;
+			children = (
+				5DFF828023125F8C008BF9B6 /* moneful */,
+				5DFF829523125F8D008BF9B6 /* monefulTests */,
+				5DFF82A023125F8D008BF9B6 /* monefulUITests */,
+				5DFF827F23125F8C008BF9B6 /* Products */,
+				DAF9DB4D4C3BA99091F58937 /* Pods */,
+				BF5AA296950642B0F5053D6B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DFF827F23125F8C008BF9B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DFF827E23125F8C008BF9B6 /* moneful.app */,
+				5DFF829223125F8D008BF9B6 /* monefulTests.xctest */,
+				5DFF829D23125F8D008BF9B6 /* monefulUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DFF828023125F8C008BF9B6 /* moneful */ = {
+			isa = PBXGroup;
+			children = (
+				5D13A5F52314A3B300D94746 /* images */,
+				5DFF828123125F8C008BF9B6 /* AppDelegate.swift */,
+				5D0724F9232064BA0090AAAA /* writeViewController.swift */,
+				5DFF828323125F8C008BF9B6 /* ViewController.swift */,
+				5D27E51E235AFD320066F957 /* todoRealm.swift */,
+				5DFF828523125F8C008BF9B6 /* Main.storyboard */,
+				5DFF828823125F8D008BF9B6 /* Assets.xcassets */,
+				5DFF828A23125F8D008BF9B6 /* LaunchScreen.storyboard */,
+				5DFF828D23125F8D008BF9B6 /* Info.plist */,
+			);
+			path = moneful;
+			sourceTree = "<group>";
+		};
+		5DFF829523125F8D008BF9B6 /* monefulTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DFF829623125F8D008BF9B6 /* monefulTests.swift */,
+				5DFF829823125F8D008BF9B6 /* Info.plist */,
+			);
+			path = monefulTests;
+			sourceTree = "<group>";
+		};
+		5DFF82A023125F8D008BF9B6 /* monefulUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DFF82A123125F8D008BF9B6 /* monefulUITests.swift */,
+				5DFF82A323125F8D008BF9B6 /* Info.plist */,
+			);
+			path = monefulUITests;
+			sourceTree = "<group>";
+		};
+		BF5AA296950642B0F5053D6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AC06340D9A9DC473BEB6854 /* Pods_moneful.framework */,
+				E9D64DCCF652C88049DEF5E2 /* Pods_monefulTests.framework */,
+				66A6CFE468B79F3CCB77A95A /* Pods_monefulUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF9DB4D4C3BA99091F58937 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E703F341FF700300A543027 /* Pods-moneful.debug.xcconfig */,
+				CC6DECF818E4FDDF0A1C010E /* Pods-moneful.release.xcconfig */,
+				771AFD50A38908849CD72AC8 /* Pods-monefulTests.debug.xcconfig */,
+				75D61755612CA5B86C4BFB84 /* Pods-monefulTests.release.xcconfig */,
+				5FBE1EEC7FA8016B0FAAB862 /* Pods-monefulUITests.debug.xcconfig */,
+				0B9D98341BAB6010B1D3BFFD /* Pods-monefulUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DFF827D23125F8C008BF9B6 /* moneful */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DFF82A623125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "moneful" */;
+			buildPhases = (
+				52292DBD85452AAB735ECBA5 /* [CP] Check Pods Manifest.lock */,
+				5DFF827A23125F8C008BF9B6 /* Sources */,
+				5DFF827B23125F8C008BF9B6 /* Frameworks */,
+				5DFF827C23125F8C008BF9B6 /* Resources */,
+				B569A1DE8F4FA8366FBB0ABB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moneful;
+			productName = moneful;
+			productReference = 5DFF827E23125F8C008BF9B6 /* moneful.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DFF829123125F8D008BF9B6 /* monefulTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DFF82A923125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "monefulTests" */;
+			buildPhases = (
+				E77CA1BEF1CD33F8B89387A9 /* [CP] Check Pods Manifest.lock */,
+				5DFF828E23125F8D008BF9B6 /* Sources */,
+				5DFF828F23125F8D008BF9B6 /* Frameworks */,
+				5DFF829023125F8D008BF9B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DFF829423125F8D008BF9B6 /* PBXTargetDependency */,
+			);
+			name = monefulTests;
+			productName = monefulTests;
+			productReference = 5DFF829223125F8D008BF9B6 /* monefulTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DFF829C23125F8D008BF9B6 /* monefulUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DFF82AC23125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "monefulUITests" */;
+			buildPhases = (
+				E2A04BFB860BC2157AD90EB1 /* [CP] Check Pods Manifest.lock */,
+				5DFF829923125F8D008BF9B6 /* Sources */,
+				5DFF829A23125F8D008BF9B6 /* Frameworks */,
+				5DFF829B23125F8D008BF9B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DFF829F23125F8D008BF9B6 /* PBXTargetDependency */,
+			);
+			name = monefulUITests;
+			productName = monefulUITests;
+			productReference = 5DFF829D23125F8D008BF9B6 /* monefulUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DFF827623125F8C008BF9B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = yoshimurayusaku;
+				TargetAttributes = {
+					5DFF827D23125F8C008BF9B6 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					5DFF829123125F8D008BF9B6 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5DFF827D23125F8C008BF9B6;
+					};
+					5DFF829C23125F8D008BF9B6 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5DFF827D23125F8C008BF9B6;
+					};
+				};
+			};
+			buildConfigurationList = 5DFF827923125F8C008BF9B6 /* Build configuration list for PBXProject "moneful" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DFF827523125F8C008BF9B6;
+			productRefGroup = 5DFF827F23125F8C008BF9B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DFF827D23125F8C008BF9B6 /* moneful */,
+				5DFF829123125F8D008BF9B6 /* monefulTests */,
+				5DFF829C23125F8D008BF9B6 /* monefulUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DFF827C23125F8C008BF9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D13A5F92314A46F00D94746 /* icons8-設定-24.png in Resources */,
+				5DFF828C23125F8D008BF9B6 /* LaunchScreen.storyboard in Resources */,
+				5DFF828923125F8D008BF9B6 /* Assets.xcassets in Resources */,
+				5D13A5F72314A46500D94746 /* icons8-ホームページ-24.png in Resources */,
+				5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF829023125F8D008BF9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF829B23125F8D008BF9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52292DBD85452AAB735ECBA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moneful-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B569A1DE8F4FA8366FBB0ABB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moneful/Pods-moneful-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EAIntroView/EAIntroView.framework",
+				"${BUILT_PRODUCTS_DIR}/EARestrictedScrollView/EARestrictedScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EAIntroView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EARestrictedScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moneful/Pods-moneful-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A04BFB860BC2157AD90EB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-monefulUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E77CA1BEF1CD33F8B89387A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-monefulTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DFF827A23125F8C008BF9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */,
+				5D27E51F235AFD320066F957 /* todoRealm.swift in Sources */,
+				5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */,
+				5D0724FA232064BA0090AAAA /* writeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF828E23125F8D008BF9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFF829723125F8D008BF9B6 /* monefulTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DFF829923125F8D008BF9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFF82A223125F8D008BF9B6 /* monefulUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DFF829423125F8D008BF9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DFF827D23125F8C008BF9B6 /* moneful */;
+			targetProxy = 5DFF829323125F8D008BF9B6 /* PBXContainerItemProxy */;
+		};
+		5DFF829F23125F8D008BF9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DFF827D23125F8C008BF9B6 /* moneful */;
+			targetProxy = 5DFF829E23125F8D008BF9B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DFF828523125F8C008BF9B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DFF828623125F8C008BF9B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DFF828A23125F8D008BF9B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DFF828B23125F8D008BF9B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DFF82A423125F8D008BF9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DFF82A523125F8D008BF9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DFF82A723125F8D008BF9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E703F341FF700300A543027 /* Pods-moneful.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = moneful/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.moneful;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DFF82A823125F8D008BF9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6DECF818E4FDDF0A1C010E /* Pods-moneful.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = moneful/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.moneful;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DFF82AA23125F8D008BF9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 771AFD50A38908849CD72AC8 /* Pods-monefulTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = monefulTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.monefulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moneful.app/moneful";
+			};
+			name = Debug;
+		};
+		5DFF82AB23125F8D008BF9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75D61755612CA5B86C4BFB84 /* Pods-monefulTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = monefulTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.monefulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moneful.app/moneful";
+			};
+			name = Release;
+		};
+		5DFF82AD23125F8D008BF9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FBE1EEC7FA8016B0FAAB862 /* Pods-monefulUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = monefulUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.monefulUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moneful;
+			};
+			name = Debug;
+		};
+		5DFF82AE23125F8D008BF9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9D98341BAB6010B1D3BFFD /* Pods-monefulUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = monefulUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.monefulUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moneful;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DFF827923125F8C008BF9B6 /* Build configuration list for PBXProject "moneful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFF82A423125F8D008BF9B6 /* Debug */,
+				5DFF82A523125F8D008BF9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DFF82A623125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "moneful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFF82A723125F8D008BF9B6 /* Debug */,
+				5DFF82A823125F8D008BF9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DFF82A923125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "monefulTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFF82AA23125F8D008BF9B6 /* Debug */,
+				5DFF82AB23125F8D008BF9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DFF82AC23125F8D008BF9B6 /* Build configuration list for PBXNativeTarget "monefulUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFF82AD23125F8D008BF9B6 /* Debug */,
+				5DFF82AE23125F8D008BF9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DFF827623125F8C008BF9B6 /* Project object */;
+}
