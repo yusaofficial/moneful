@@ -21,4 +21,6 @@ pod 'RealmSwift'
 
 pod 'EAIntroView'
 
+pod 'YSCheckBox'
+
 end

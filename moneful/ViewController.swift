@@ -7,7 +7,10 @@
 //
 
 import UIKit
-import RealmSwift
+import EAIntroView
+import EARestrictedScrollView
+
+var title: String?
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -19,11 +22,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       
-       
+        if UserDefaults.standard.object(forKey: "TodoList") != nil {
+            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+        }
+        
+        TableView.reloadData()
         
     }
     
+   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDiary") {
+            let diaryView = segue.destination as! writeViewController
+            diaryView.title = self.title
+        }
+        
+    }
+        
    // override func setEditing(_ editing: Bool, animated: Bool) {
  //       super .setEditing(editing, animated: animated)
  //       TableView.isEditing = editing
@@ -56,9 +72,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         feedTodo.remove(at: indexPath.row)
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
-        
-        
+       
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // アクションを実装
+        
+        
+        // タップされたセルの行番号を出力
+        print("\(indexPath.row)番目の行が選択されました。")
+        
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // 別の画面に遷移
+        performSegue(withIdentifier: "toNextViewController", sender: nil)
+    }
+    
+   
     
     
    

@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import RealmSwift
 
  var feedTodo = [String]()
 
 class writeViewController: UIViewController, UITextFieldDelegate {
-
+    
     var datePicker = UIDatePicker()
     
     @IBOutlet weak var writeTextField : UITextField!
@@ -39,21 +38,14 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = toolbar
         
-        
         if UserDefaults.standard.object(forKey: "TodoList") != nil {
-            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
-        }
+        feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+    }
         
         // プレースホルダー
         dateTextField.placeholder = "改善期限を設定"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        writeTextField.text = title
-        
-    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -89,8 +81,8 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         //追加ボタンを押したらフィールドを空にする
         writeTextField.text = ""
         //変数の中身をUDに追加
-        UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
-        
+       UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
+     
         self.navigationController?.popToRootViewController(animated: true)
     }
     

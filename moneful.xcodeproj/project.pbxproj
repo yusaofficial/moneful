@@ -12,7 +12,6 @@
 		5D0724FA232064BA0090AAAA /* writeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0724F9232064BA0090AAAA /* writeViewController.swift */; };
 		5D13A5F72314A46500D94746 /* icons8-ホームページ-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */; };
 		5D13A5F92314A46F00D94746 /* icons8-設定-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D13A5F82314A46F00D94746 /* icons8-設定-24.png */; };
-		5D27E51F235AFD320066F957 /* todoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D27E51E235AFD320066F957 /* todoRealm.swift */; };
 		5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828123125F8C008BF9B6 /* AppDelegate.swift */; };
 		5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828323125F8C008BF9B6 /* ViewController.swift */; };
 		5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828523125F8C008BF9B6 /* Main.storyboard */; };
@@ -46,7 +45,6 @@
 		5D0724F9232064BA0090AAAA /* writeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeViewController.swift; sourceTree = "<group>"; };
 		5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ホームページ-24.png"; sourceTree = "<group>"; };
 		5D13A5F82314A46F00D94746 /* icons8-設定-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-設定-24.png"; sourceTree = "<group>"; };
-		5D27E51E235AFD320066F957 /* todoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = todoRealm.swift; path = "/Users/yoshimurayuusaku/Desktop/iOS Develop/moneful/moneful/todoRealm.swift"; sourceTree = "<absolute>"; };
 		5DFF827E23125F8C008BF9B6 /* moneful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFF828123125F8C008BF9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFF828323125F8C008BF9B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				5DFF828123125F8C008BF9B6 /* AppDelegate.swift */,
 				5D0724F9232064BA0090AAAA /* writeViewController.swift */,
 				5DFF828323125F8C008BF9B6 /* ViewController.swift */,
-				5D27E51E235AFD320066F957 /* todoRealm.swift */,
 				5DFF828523125F8C008BF9B6 /* Main.storyboard */,
 				5DFF828823125F8D008BF9B6 /* Assets.xcassets */,
 				5DFF828A23125F8D008BF9B6 /* LaunchScreen.storyboard */,
@@ -420,7 +417,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */,
-				5D27E51F235AFD320066F957 /* todoRealm.swift in Sources */,
 				5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */,
 				5D0724FA232064BA0090AAAA /* writeViewController.swift in Sources */,
 			);
