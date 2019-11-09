@@ -13,6 +13,8 @@ import EARestrictedScrollView
 var title: String?
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+    
     
     
     
@@ -21,36 +23,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        if UserDefaults.standard.object(forKey: "TodoList") != nil {
-            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
-        }
+    
+//        if UserDefaults.standard.object(forKey: "TodoList") != nil {
+//            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+//        }
+    
         
-        TableView.reloadData()
+        navigationItem.leftBarButtonItem = editButtonItem
         
     }
     
-   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDiary") {
             let diaryView = segue.destination as! writeViewController
             diaryView.title = self.title
+    }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.object(forKey: "TodoList") != nil {
+            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
         }
         
     }
-        
-   // override func setEditing(_ editing: Bool, animated: Bool) {
- //       super .setEditing(editing, animated: animated)
- //       TableView.isEditing = editing
- //   }
-
-
+    
+    
+    
+  
     @IBAction func mainmove(_ sender: Any) {
         self.performSegue(withIdentifier: "toSecond", sender: nil)
     }
-
     
+   
+    
+
     //UITableView、cellForRowAtの追加(表示するcellの中身を決める)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //変数を作る
@@ -70,10 +80,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // アイテム削除処理
         feedTodo.remove(at: indexPath.row)
+        
+        UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
+        
+        
         let indexPaths = [indexPath]
-        tableView.deleteRows(at: indexPaths, with: .automatic)
-       
+       tableView.deleteRows(at: indexPaths, with: .automatic)
+        
     }
+    
+   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -87,7 +103,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
         
         // 別の画面に遷移
-        performSegue(withIdentifier: "toNextViewController", sender: nil)
+        performSegue(withIdentifier: "toDetailViewController", sender: nil)
+
     }
     
    

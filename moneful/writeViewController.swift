@@ -33,21 +33,22 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolbar.setItems([spacelItem, doneItem], animated: true)
         
-        
+        if UserDefaults.standard.object(forKey: "TodoList") != nil {
+            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+        }
         
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = toolbar
         
-        if UserDefaults.standard.object(forKey: "TodoList") != nil {
-        feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
-    }
+       
         
         // プレースホルダー
         dateTextField.placeholder = "改善期限を設定"
+        
+        writeTextField.placeholder = "反省することを入力"
     }
     
-    
-    
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         writeTextField.resignFirstResponder()
     }
@@ -71,6 +72,9 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
         dateTextField.text = "\(formatter.string(from: datePicker.date))"
+        
+       
+        
         
     }
     

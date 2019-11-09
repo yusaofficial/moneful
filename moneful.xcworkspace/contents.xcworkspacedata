@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/yoshimurayuusaku/Desktop/iOS Develop/moneful/moneful/DetailViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:moneful.xcodeproj">
    </FileRef>
    <FileRef
