@@ -9,14 +9,13 @@
 import UIKit
 import EAIntroView
 import EARestrictedScrollView
+import BEMCheckBox
 
 var title: String?
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
-    
-    
-    
+ 
     
     @IBOutlet weak var MyButton : UIButton!
     @IBOutlet weak var TableView : UITableView!
@@ -27,12 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        if UserDefaults.standard.object(forKey: "TodoList") != nil {
 //            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
 //        }
-    
         
+    
         navigationItem.leftBarButtonItem = editButtonItem
         
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDiary") {
@@ -47,18 +45,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if UserDefaults.standard.object(forKey: "TodoList") != nil {
             feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+        
         }
         
     }
-    
-    
-    
-  
+   
     @IBAction func mainmove(_ sender: Any) {
         self.performSegue(withIdentifier: "toSecond", sender: nil)
     }
-    
-   
     
 
     //UITableView、cellForRowAtの追加(表示するcellの中身を決める)
@@ -76,18 +70,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return feedTodo.count
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+  //  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         // アイテム削除処理
-        feedTodo.remove(at: indexPath.row)
+ //       feedTodo.remove(at: indexPath.row)
         
-        UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
+ //       UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
         
         
-        let indexPaths = [indexPath]
-       tableView.deleteRows(at: indexPaths, with: .automatic)
-        
-    }
+ //       let indexPaths = [indexPath]
+ //      tableView.deleteRows(at: indexPaths, with: .automatic)
+ 
+  //  }
     
    
     
@@ -107,11 +101,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
-   
+  
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
-   
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
     
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        TableView.isEditing = editing
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            feedTodo.remove(at: indexPath.row)
+            
+            TableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+        }
+    }
     
 
 }

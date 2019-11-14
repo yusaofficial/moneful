@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b2Y-4q-qMP">
-                                <rect key="frame" x="16" y="174" width="343" height="393"/>
+                                <rect key="frame" x="16" y="174" width="343" height="316"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -37,6 +37,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rh7-Bp-g7g"/>
                     </view>
+                    <connections>
+                        <outlet property="DayLabel" destination="pNT-qp-uec" id="k5T-s8-pJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEW-TG-z5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
