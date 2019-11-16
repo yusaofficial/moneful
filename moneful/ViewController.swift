@@ -15,7 +15,8 @@ var title: String?
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
- 
+    var feedTodo = [String]()
+    var date = [Date]()
     
     @IBOutlet weak var MyButton : UIButton!
     @IBOutlet weak var TableView : UITableView!
@@ -27,16 +28,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
 //        }
         
-    
+        
+        
         navigationItem.leftBarButtonItem = editButtonItem
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.TableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDiary") {
             let diaryView = segue.destination as! writeViewController
             diaryView.title = self.title
-    }
+        }
+        if (segue.identifier == "toDetailViewController") {
+            let detailView = segue.destination as! DetailViewController
+            detailView.selectedRow = (sender as! IndexPath).row
+        }
         
     }
     
@@ -47,7 +57,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
         
         }
+        if UserDefaults.standard.object(forKey: "TodoDate") != nil {
+            date = UserDefaults.standard.object(forKey: "TodoDate") as! [Date]
+        }
         
+        print(feedTodo)
+        print(date)
+       
     }
    
     @IBAction func mainmove(_ sender: Any) {
@@ -70,20 +86,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return feedTodo.count
     }
     
-  //  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        // アイテム削除処理
- //       feedTodo.remove(at: indexPath.row)
-        
- //       UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
-        
-        
- //       let indexPaths = [indexPath]
- //      tableView.deleteRows(at: indexPaths, with: .automatic)
- 
-  //  }
-    
-   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -97,9 +99,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
         
         // 別の画面に遷移
-        performSegue(withIdentifier: "toDetailViewController", sender: nil)
+        performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
 
     }
+    
+
     
   
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -107,7 +111,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+        if tableView.isEditing {
+            return .delete
+        }
+        
+        return .none
     }
     
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
@@ -116,11 +124,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
+        //移動されたデータを取得する。
+        let movedText = feedTodo[sourceIndexPath.row]
+        let movedDate = date[sourceIndexPath.row]
+        //let moveData = tableView.cellForRowAtIndexPath(sourceIndexPath)?.textLabel!.text
+        
+        //元の位置のデータを配列から削除する。
+        feedTodo.remove(at: sourceIndexPath.row)
+        date.remove(at: sourceIndexPath.row)
+        
+        print(feedTodo)
+        
+        //移動先の位置にデータを配列に挿入する。
+        feedTodo.insert(movedText, at:destinationIndexPath.row)
+        
+        //移動先の位置にデータを配列に挿入する。
+        date.insert(movedDate, at:destinationIndexPath.row)
+        print(feedTodo)
+        
+        UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
+        
+        UserDefaults.standard.set( date, forKey: "TodoDate" )
+        //tableView.reloadData()
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         TableView.isEditing = editing
+      
         
     }
     
@@ -131,6 +162,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             feedTodo.remove(at: indexPath.row)
             
             TableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            
+            UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
         }
     }
     

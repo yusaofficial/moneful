@@ -9,18 +9,17 @@
 import UIKit
 import RealmSwift
 
- var feedTodo = [String]()
 
 
 class writeViewController: UIViewController, UITextFieldDelegate {
     
-    var date = ""
+    var feedTodo = [String]()
+    
+    var date = [Date]()
     
     var datePicker = UIDatePicker()
     
     var timer : Timer!
-    
-    let date2 = DateManager()
     
     
     @IBOutlet weak var writeTextField : UITextField!
@@ -44,6 +43,10 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         
         if UserDefaults.standard.object(forKey: "TodoList") != nil {
             feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
+        }
+        
+        if UserDefaults.standard.object(forKey: "TodoDate") != nil {
+            date = UserDefaults.standard.object(forKey: "TodoDate") as! [Date]
         }
         
         dateTextField.inputView = datePicker
@@ -89,21 +92,19 @@ class writeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func TodoAddButten(_ sender: Any) {
         //変数に入力内容を入れる
         feedTodo.append(writeTextField.text!)
+        
+        date.append(datePicker.date)
         //追加ボタンを押したらフィールドを空にする
         writeTextField.text = ""
         //変数の中身をUDに追加
        UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
         
+       UserDefaults.standard.set( date, forKey: "TodoDate" )
         
-     
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-  //  override func viewWillAppear(_ animated: Bool) {
-        //カウントダウン
- //       timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
- //       timer.fire()
-//    }
+  
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -111,28 +112,9 @@ class writeViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        timer.invalidate()
-//        timer = nil
-//    }
-    
-//    @objc func update(tm: Timer) {
-        
-//        let count: String = datePicker.date()
-//        let count2: TimeInterval = TimeInterval(count) as! TimeInterval
-//        let formatter = DateComponentsFormatter()
-        
-        // 表示フォーマットを変更．.positionalや.fullで表示が変わります．
-//        formatter.unitsStyle = .brief
-        // 使用する単位　.minuteのみにすると232,071minのように出力されます．
-//        formatter.allowedUnits = [.year, .month, .day, .hour, .minute, .second]
-        // 作成したformatterでtimeintervalをstringに変換します．
-//        print(formatter.string(from: count2)!) // →5mths 10days 3hr 44min 28sec
-        //時間をラベルに表示
-      
-//    }
+
  
+}
     
 
-}
+
