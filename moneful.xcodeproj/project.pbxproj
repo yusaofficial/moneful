@@ -16,6 +16,10 @@
 		5D51A8B52377E66F003FD021 /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51A8B32377E66F003FD021 /* CheckTableViewCell.swift */; };
 		5D51A8B9237820A1003FD021 /* TodoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51A8B8237820A1003FD021 /* TodoRealm.swift */; };
 		5D6056D0236E4BD50034B340 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6056CF236E4BD50034B340 /* DetailViewController.swift */; };
+		5D6479EA238819500052D4A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6479E9238819500052D4A0 /* IntroViewController.swift */; };
+		5D725EF72386BCC6006EDDC1 /* IntroViewPaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D725EF62386BCC6006EDDC1 /* IntroViewPaper.png */; };
+		5D725EF92386BDDC006EDDC1 /* IntroViewPaper2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D725EF82386BDDB006EDDC1 /* IntroViewPaper2.png */; };
+		5D725EFB2386BDE5006EDDC1 /* IntroViewPaper3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D725EFA2386BDE5006EDDC1 /* IntroViewPaper3.png */; };
 		5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828123125F8C008BF9B6 /* AppDelegate.swift */; };
 		5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828323125F8C008BF9B6 /* ViewController.swift */; };
 		5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828523125F8C008BF9B6 /* Main.storyboard */; };
@@ -54,7 +58,12 @@
 		5D51A8B42377E66F003FD021 /* CheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CheckTableViewCell.xib; path = "/Users/yoshimurayuusaku/Desktop/iOS Develop/moneful/moneful/CheckTableViewCell.xib"; sourceTree = "<absolute>"; };
 		5D51A8B8237820A1003FD021 /* TodoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRealm.swift; sourceTree = "<group>"; };
 		5D6056CF236E4BD50034B340 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "/Users/yoshimurayuusaku/Desktop/iOS Develop/moneful/moneful/DetailViewController.swift"; sourceTree = "<absolute>"; };
-		5DFF827E23125F8C008BF9B6 /* moneful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneful.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6479E9238819500052D4A0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		5D725EF62386BCC6006EDDC1 /* IntroViewPaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntroViewPaper.png; sourceTree = "<group>"; };
+		5D725EF82386BDDB006EDDC1 /* IntroViewPaper2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntroViewPaper2.png; sourceTree = "<group>"; };
+		5D725EFA2386BDE5006EDDC1 /* IntroViewPaper3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntroViewPaper3.png; sourceTree = "<group>"; };
+		5D725EFC23873323006EDDC1 /* moneful.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moneful.entitlements; sourceTree = "<group>"; };
+		5DFF827E23125F8C008BF9B6 /* FeedWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFF828123125F8C008BF9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFF828323125F8C008BF9B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DFF828623125F8C008BF9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +118,9 @@
 			children = (
 				5D13A5F62314A46500D94746 /* icons8-ホームページ-24.png */,
 				5D13A5F82314A46F00D94746 /* icons8-設定-24.png */,
+				5D725EF62386BCC6006EDDC1 /* IntroViewPaper.png */,
+				5D725EF82386BDDB006EDDC1 /* IntroViewPaper2.png */,
+				5D725EFA2386BDE5006EDDC1 /* IntroViewPaper3.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -128,7 +140,7 @@
 		5DFF827F23125F8C008BF9B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DFF827E23125F8C008BF9B6 /* moneful.app */,
+				5DFF827E23125F8C008BF9B6 /* FeedWrite.app */,
 				5DFF829223125F8D008BF9B6 /* monefulTests.xctest */,
 				5DFF829D23125F8D008BF9B6 /* monefulUITests.xctest */,
 			);
@@ -138,9 +150,11 @@
 		5DFF828023125F8C008BF9B6 /* moneful */ = {
 			isa = PBXGroup;
 			children = (
+				5D725EFC23873323006EDDC1 /* moneful.entitlements */,
 				5D13A5F52314A3B300D94746 /* images */,
 				5DFF828123125F8C008BF9B6 /* AppDelegate.swift */,
 				5D28444B237C3E120000F916 /* DateManager.swift */,
+				5D6479E9238819500052D4A0 /* IntroViewController.swift */,
 				5D6056CF236E4BD50034B340 /* DetailViewController.swift */,
 				5D0724F9232064BA0090AAAA /* writeViewController.swift */,
 				5DFF828323125F8C008BF9B6 /* ViewController.swift */,
@@ -215,7 +229,7 @@
 			);
 			name = moneful;
 			productName = moneful;
-			productReference = 5DFF827E23125F8C008BF9B6 /* moneful.app */;
+			productReference = 5DFF827E23125F8C008BF9B6 /* FeedWrite.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5DFF829123125F8D008BF9B6 /* monefulTests */ = {
@@ -304,11 +318,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D725EFB2386BDE5006EDDC1 /* IntroViewPaper3.png in Resources */,
+				5D725EF72386BCC6006EDDC1 /* IntroViewPaper.png in Resources */,
 				5D13A5F92314A46F00D94746 /* icons8-設定-24.png in Resources */,
 				5DFF828C23125F8D008BF9B6 /* LaunchScreen.storyboard in Resources */,
 				5DFF828923125F8D008BF9B6 /* Assets.xcassets in Resources */,
 				5D13A5F72314A46500D94746 /* icons8-ホームページ-24.png in Resources */,
 				5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */,
+				5D725EF92386BDDC006EDDC1 /* IntroViewPaper2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +456,7 @@
 				5D0724FA232064BA0090AAAA /* writeViewController.swift in Sources */,
 				5D6056D0236E4BD50034B340 /* DetailViewController.swift in Sources */,
 				5D51A8B9237820A1003FD021 /* TodoRealm.swift in Sources */,
+				5D6479EA238819500052D4A0 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +632,7 @@
 			baseConfigurationReference = 1E703F341FF700300A543027 /* Pods-moneful.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = moneful/moneful.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY7H65KG5U;
 				INFOPLIST_FILE = moneful/Info.plist;
@@ -622,7 +641,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.moneful;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FeedWrite;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -633,6 +652,7 @@
 			baseConfigurationReference = CC6DECF818E4FDDF0A1C010E /* Pods-moneful.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = moneful/moneful.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY7H65KG5U;
 				INFOPLIST_FILE = moneful/Info.plist;
@@ -641,7 +661,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yusaku.com.moneful;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FeedWrite;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import EAIntroView
-import EARestrictedScrollView
 import BEMCheckBox
 
 var title: String?
@@ -17,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
     var feedTodo = [String]()
     var date = [Date]()
+    
     
     @IBOutlet weak var MyButton : UIButton!
     @IBOutlet weak var TableView : UITableView!
@@ -70,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.performSegue(withIdentifier: "toSecond", sender: nil)
     }
     
-
+    
     //UITableView、cellForRowAtの追加(表示するcellの中身を決める)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //変数を作る
@@ -104,18 +103,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
 
-    
-  
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         if tableView.isEditing {
+            
+    
+            // テキストとDateの取得
+           let removedText = feedTodo[indexPath.row]
+           let removedDate = date[indexPath.row]
+            
+            // 削除前のテキストとDateを削除する
+         feedTodo.remove(at: indexPath.row)
+            date.remove(at: indexPath.row)
+            
+            // 削除後のテキストとDateを挿入する
+          feedTodo.insert(removedText, at: indexPath.row)
+            date.insert(removedDate, at: indexPath.row)
+            
+            // UserDefaultsの更新
+            UserDefaults.standard.set(feedTodo, forKey: "TodoList")
+            UserDefaults.standard.set(date, forKey: "TodoDate")
+            
             return .delete
         }
-        
+    
         return .none
+        
     }
     
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {

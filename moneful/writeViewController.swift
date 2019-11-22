@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
-
 
 
 class writeViewController: UIViewController, UITextFieldDelegate {
@@ -19,7 +17,7 @@ class writeViewController: UIViewController, UITextFieldDelegate {
     
     var datePicker = UIDatePicker()
     
-    var timer : Timer!
+   
     
     
     @IBOutlet weak var writeTextField : UITextField!
