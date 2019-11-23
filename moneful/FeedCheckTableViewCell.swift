@@ -1,32 +1,30 @@
 //
-//  CheckTableViewCell.swift
-//  
+//  FeedCheckTableViewCell.swift
+//  moneful
 //
-//  Created by 吉村勇作 on 2019/11/10.
+//  Created by 吉村勇作 on 2019/11/23.
+//  Copyright © 2019 yoshimurayusaku. All rights reserved.
 //
 
 import UIKit
 import BEMCheckBox
 
-class CheckTableViewCell: UITableViewCell {
+class FeedCheckTableViewCell: UITableViewCell {
     
     @IBOutlet var checkBox: BEMCheckBox!
-    @IBOutlet var sampleLabel: UILabel!
-    
+    @IBOutlet var feedLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         checkBox.boxType = .square
         checkBox.animationDuration = 0.1
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
-    
     
 }

@@ -11,7 +11,7 @@ import BEMCheckBox
 
 var title: String?
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, BEMCheckBoxDelegate {
   
     var feedTodo = [String]()
     var date = [Date]()
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var MyButton : UIButton!
     @IBOutlet weak var TableView : UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            feedTodo = UserDefaults.standard.object(forKey: "TodoList") as! [String]
 //        }
         
-        
+        let nib = UINib(nibName: "FeedCheckTableViewCell", bundle: nil)
+        TableView.register(nib, forCellReuseIdentifier: "FeedCheckTableViewCell")
         
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -73,11 +75,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //UITableView、cellForRowAtの追加(表示するcellの中身を決める)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //変数を作る
-        let TodoCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCheckTableViewCell") as! FeedCheckTableViewCell
         //変数の中身を作る
-        TodoCell.textLabel!.text = feedTodo[indexPath.row]
+        cell.feedLabel.text = feedTodo[indexPath.row]
+        
+        cell.checkBox.tag = indexPath.row
+        cell.checkBox.delegate = self
+        
         //戻り値の設定（表示する中身)
-        return TodoCell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -176,13 +182,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if editingStyle == .delete {
             
             feedTodo.remove(at: indexPath.row)
+            date.remove(at: indexPath.row)
             
             TableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
             
             UserDefaults.standard.set( feedTodo, forKey: "TodoList" )
+            UserDefaults.standard.set(date, forKey: "TodoDate")
         }
     }
     
 
+    func didTap(_ checkBox: BEMCheckBox) {
+        // なんばんめのcheckBoxがタップされたか
+        print(checkBox.tag, feedTodo[checkBox.tag])
+        
+        print(checkBox.tag, date[checkBox.tag])
+    }
+    
+    
 }
 
