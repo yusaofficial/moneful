@@ -11,14 +11,18 @@ import BEMCheckBox
 
 var title: String?
 
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, BEMCheckBoxDelegate {
   
     var feedTodo = [String]()
     var date = [Date]()
     
+    var number : Int = 0
+    
     
     @IBOutlet weak var MyButton : UIButton!
     @IBOutlet weak var TableView : UITableView!
+   
     
 
     override func viewDidLoad() {
@@ -61,6 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if UserDefaults.standard.object(forKey: "TodoDate") != nil {
             date = UserDefaults.standard.object(forKey: "TodoDate") as! [Date]
         }
+       
         
         print(feedTodo)
         print(date)
@@ -197,7 +202,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(checkBox.tag, feedTodo[checkBox.tag])
         
         print(checkBox.tag, date[checkBox.tag])
+        
+        number = number + 1
+        
+        // userdefaultsに保存
+        let ud = UserDefaults.standard
+        ud.set(number, forKey: "Number")
+        ud.synchronize()
     }
+    
     
     
 }

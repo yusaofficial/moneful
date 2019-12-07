@@ -10,21 +10,44 @@ import UIKit
 
 class RecordViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel : UILabel!
+    
+    @IBOutlet weak var numberLabel : UILabel!
+    
+    var passedNumber : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let ud = UserDefaults.standard
+              passedNumber = ud.integer(forKey: "Number")
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+              numberLabel.text = String(passedNumber)
+        
+        UserDefaults.standard.set(passedNumber, forKey: "Number")
+        
+        if passedNumber <= 2 {
+            titleLabel.text = "未熟な反省人"
+        }
+        if passedNumber > 2 {
+            titleLabel.text = "見習い反省人"
+        }
+        
+       
     }
-    */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+    }
+    
+   
+
+    
+    
 
 }

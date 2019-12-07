@@ -41,6 +41,7 @@
 		5D725EFB2386BDE5006EDDC1 /* IntroViewPaper3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D725EFA2386BDE5006EDDC1 /* IntroViewPaper3.png */; };
 		5DB244E7238911B100BF8771 /* FeedCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB244E5238911B100BF8771 /* FeedCheckTableViewCell.swift */; };
 		5DB244E8238911B100BF8771 /* FeedCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB244E6238911B100BF8771 /* FeedCheckTableViewCell.xib */; };
+		5DBFA4CB2393E05100C79589 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBFA4CA2393E05100C79589 /* TabBarViewController.swift */; };
 		5DFF828223125F8C008BF9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828123125F8C008BF9B6 /* AppDelegate.swift */; };
 		5DFF828423125F8C008BF9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF828323125F8C008BF9B6 /* ViewController.swift */; };
 		5DFF828723125F8C008BF9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFF828523125F8C008BF9B6 /* Main.storyboard */; };
@@ -104,6 +105,7 @@
 		5D725EFC23873323006EDDC1 /* moneful.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moneful.entitlements; sourceTree = "<group>"; };
 		5DB244E5238911B100BF8771 /* FeedCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCheckTableViewCell.swift; sourceTree = "<group>"; };
 		5DB244E6238911B100BF8771 /* FeedCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCheckTableViewCell.xib; sourceTree = "<group>"; };
+		5DBFA4CA2393E05100C79589 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5DFF827E23125F8C008BF9B6 /* FeedWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFF828123125F8C008BF9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFF828323125F8C008BF9B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				5DB244E6238911B100BF8771 /* FeedCheckTableViewCell.xib */,
 				5D725EFC23873323006EDDC1 /* moneful.entitlements */,
 				5DFF828123125F8C008BF9B6 /* AppDelegate.swift */,
+				5DBFA4CA2393E05100C79589 /* TabBarViewController.swift */,
 				5D28444B237C3E120000F916 /* DateManager.swift */,
 				5D6479E9238819500052D4A0 /* IntroViewController.swift */,
 				5D6056CF236E4BD50034B340 /* DetailViewController.swift */,
@@ -554,6 +557,7 @@
 				5D6056D0236E4BD50034B340 /* DetailViewController.swift in Sources */,
 				5DB244E7238911B100BF8771 /* FeedCheckTableViewCell.swift in Sources */,
 				5D51A8B9237820A1003FD021 /* TodoRealm.swift in Sources */,
+				5DBFA4CB2393E05100C79589 /* TabBarViewController.swift in Sources */,
 				5D6479EA238819500052D4A0 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,15 +11,37 @@ import EAIntroView
 import EARestrictedScrollView
 
 class IntroViewController: UIViewController, EAIntroDelegate {
-
+    
+    
     @IBOutlet weak var startButton : UIButton!
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.showIntroWithCrossDissolve()
+        
+        let ud = UserDefaults.standard
+        let kidou = ud.string(forKey: "kidou") ?? "1"
+    
+        if kidou == "0" {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(IntroViewController.jmptabView), userInfo: nil, repeats: false)
+            
+        }else{
+            ud.set("0", forKey: "kidou")
+        }
+        
 
+    }
+    
+    @IBAction func tappedmove(_ sender: Any) {
+        
+        self .performSegue(withIdentifier: "toTabView", sender: nil)
+    }
+    
+    
+    @objc func jmptabView() {
+        
+        self .performSegue(withIdentifier: "toTabView", sender: nil)
     }
     
     func showIntroWithCrossDissolve(){
@@ -56,7 +78,7 @@ class IntroViewController: UIViewController, EAIntroDelegate {
            
            
        let intro : EAIntroView = EAIntroView(frame: self.view.bounds, andPages:[page1,page2,page3])
-           intro.skipButton.setTitle("スキップ", for: UIControl.State.normal)
+          
            intro.delegate = self
            intro.show(in: self.view, animateDuration:0.0)
 

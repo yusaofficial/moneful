@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var dfLabel : UILabel!
     
-    var selectedRow:Int = 0
+    var selectedRow : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,23 +32,23 @@ class DetailViewController: UIViewController {
             
             dfLabel.text = getToday()
         
-            
         }
         
-        
-        
-        
-    //    Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(DetailViewController.timerUpdate), userInfo: nil, repeats: true)
-        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(DetailViewController.timerUpdate), userInfo: nil, repeats: true)
+     
        
+        
+        
+  
         
     }
     
   
- //   @objc func timerUpdate() {
-         
+    @objc func timerUpdate() {
         
-//      }
+   
+         
+      }
     
     // 今日の日付を取得
     func getToday(format:String = "yyyy年MM月dd日") -> String {
@@ -59,14 +59,21 @@ class DetailViewController: UIViewController {
         return formatter.string(from: now as Date)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+}
+
+class DateUtils {
+    class func dateFromString(string: String, format: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.date(from: string)!
+    }
+
+    class func stringFromDate(date: Date, format: String) -> String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
 }

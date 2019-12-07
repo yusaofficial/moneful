@@ -17,9 +17,7 @@ class writeViewController: UIViewController, UITextFieldDelegate {
     
     var datePicker = UIDatePicker()
     
-   
-    
-    
+    @IBOutlet weak var addButton : UIButton!
     @IBOutlet weak var writeTextField : UITextField!
     @IBOutlet weak var dateTextField : UITextField!
     
@@ -50,22 +48,31 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = toolbar
         
-       
-        
         // プレースホルダー
         dateTextField.placeholder = "改善期限を設定"
         
         writeTextField.placeholder = "反省することを入力"
+        
+        self.writeTextField.delegate = self
+        
     }
+    
+    
     
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         writeTextField.resignFirstResponder()
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     
     writeTextField.resignFirstResponder()
+        
+        if writeTextField.text == "" {
+            
+            writeTextField.text = "入力が未完了です"
+        }
     return true
     }
     
@@ -85,6 +92,11 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         formatter.dateFormat = "yyyy年MM月dd日"
         dateTextField.text = "\(formatter.string(from: datePicker.date))"
         
+        if dateTextField.text == "" {
+            
+            dateTextField.text = "入力が未完了です"
+        }
+        
     }
     
     @IBAction func TodoAddButten(_ sender: Any) {
@@ -99,18 +111,24 @@ class writeViewController: UIViewController, UITextFieldDelegate {
         
        UserDefaults.standard.set( date, forKey: "TodoDate" )
         
+        
         self.navigationController?.popToRootViewController(animated: true)
     }
     
   
+    
+   
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
     
-    
+ 
 
+ 
+ 
  
 }
     
